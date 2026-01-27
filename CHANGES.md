@@ -1,0 +1,5 @@
+# Changes
+
+Version 0.1.0 (released 2026-01-27)
+
+- Initial public release

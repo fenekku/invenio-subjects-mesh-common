@@ -1,0 +1,24 @@
+# -*- coding: utf-8 -*-
+#
+# Copyright (C) 2023-2025 Northwestern University.
+#
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Reason'
+        required: false
+        default: 'Manual trigger'
+
+jobs:
+  tests:
+    uses: galterlibrary/reusable-workflows/.github/workflows/inveniordm-tests-python.yml@main
+    with:
+      python-version: '["3.11", "3.14"]'
