@@ -14,18 +14,16 @@ a dependency to those downstream distribution packages.
 ## Installation
 
 ```bash
-pip install invenio-subjects-mesh-common
+uv add invenio-subjects-mesh-common
 ```
 
 
 ## Development
 
-Install the project in editable mode with `dev` dependencies in an isolated virtualenv. We recommend using `uv`:
+Install the project in editable mode with `dev` dependencies in an isolated virtualenv:
 
 ```bash
 uv pip install -e .[dev]
-# or if using pipenv
-pipenv run pip install -e .[dev]
 ```
 
 Run tests:
@@ -34,8 +32,6 @@ Run tests:
 uv run invoke test
 # or shorter
 uv run inv test
-# or if using pipenv
-pipenv run inv test
 ```
 
 Test compatibility with the pre-release version of InvenioRDM (invenio-app-rdm):
@@ -44,18 +40,8 @@ Test compatibility with the pre-release version of InvenioRDM (invenio-app-rdm):
 uv run --extra dev_pre --prerelease=allow inv test
 ```
 
-Check manifest:
-
-```bash
-uv run inv check-manifest
-# or if using pipenv
-pipenv run inv check-manifest
-```
-
 Clean out artefacts:
 
 ```bash
 uv run inv clean
-# or if using pipenv
-pipenv run inv clean
 ```
